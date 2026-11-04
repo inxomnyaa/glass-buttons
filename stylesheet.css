@@ -99,3 +99,55 @@
 .app-folder-dialog.appfolder-dialogs-transparent {
   background-color: rgba(0, 0, 0, 0.22) !important;
 }
+
+/* --- buttons from other extensions inside panel popup menus
+ * (e.g. Tiling Shell: "layout-button button", "message-list-clear-button button") --- */
+.popup-menu-content .button,
+.popup-menu-content .layout-button,
+.popup-menu-content .message-list-clear-button {
+  background-color: rgba(255, 255, 255, 0.10) !important;
+}
+.popup-menu-content .button:hover,
+.popup-menu-content .layout-button:hover,
+.popup-menu-content .message-list-clear-button:hover,
+.popup-menu-content .layout-button:checked {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+.popup-menu-content .button:active,
+.popup-menu-content .message-list-clear-button:active {
+  background-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+/* --- Copyous clipboard: items, search field, header/footer buttons --- */
+.clipboard-item,
+.clipboard-item .content-preview,
+.clipboard-dialog .clipboard-search-entry,
+.clipboard-dialog .dialog-footer .dialog-footer-button,
+.clipboard-dialog .dialog-footer .dialog-footer-icon-button,
+.clipboard-dialog .dialog-header .dialog-header-button,
+.clipboard-dialog .dialog-header .dialog-header-icon-button {
+  background-color: rgba(255, 255, 255, 0.10) !important;
+}
+.clipboard-item:hover,
+.clipboard-dialog .dialog-footer .dialog-footer-button:hover,
+.clipboard-dialog .dialog-footer .dialog-footer-icon-button:hover,
+.clipboard-dialog .dialog-header .dialog-header-button:hover,
+.clipboard-dialog .dialog-header .dialog-header-icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+.clipboard-item .content-preview {
+  background-color: transparent !important;
+}
+
+/* --- keep the translucent accent on active quick toggles: they also carry the
+ * generic "button" class, so the extension-button rule above would turn them grey --- */
+.popup-menu-content .quick-toggle:checked,
+.popup-menu-content .quick-toggle-has-menu .quick-toggle-menu-button:checked,
+.popup-menu-content .calendar .calendar-day.calendar-today {
+  background-color: st-transparentize(-st-accent-color, 0.45) !important;
+}
+.popup-menu-content .quick-toggle:checked:hover,
+.popup-menu-content .quick-toggle-has-menu .quick-toggle-menu-button:checked:hover,
+.popup-menu-content .calendar .calendar-day.calendar-today:hover {
+  background-color: st-transparentize(-st-accent-color, 0.30) !important;
+}

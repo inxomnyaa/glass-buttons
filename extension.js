@@ -41,7 +41,11 @@ export default class GlassButtons extends Extension {
     }
 
     _arrowOf(item) {
-        const icon = item?._menuButton?.child;
+        // normal menu toggles / sliders: separate arrow button
+        let icon = item?._menuButton?.child;
+        // "Background Apps": no menu button, the ">" is the toggle's own icon
+        if (!icon && item?.has_style_class_name?.('background-apps-quick-toggle'))
+            icon = item._icon;
         return icon instanceof Clutter.Actor ? icon : null;
     }
 

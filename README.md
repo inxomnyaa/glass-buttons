@@ -5,7 +5,8 @@ A small GNOME Shell extension (GNOME 49–51) for a glassier shell, made to go w
 ## Features
 
 - **Translucent buttons:** Quick Settings toggles, the calendar/notification popup and app folders get translucent glass buttons that match the blurred popups behind them, instead of solid grey or accent-colored ones.
-- **Rotating submenu arrows:** the `>` arrow on a Quick Settings item (Wi-Fi, Bluetooth, power mode, …) turns smoothly into a `V` while its submenu is open and turns back when it closes. This also works for items that other extensions add.
+- **Other extensions' buttons:** buttons that other extensions put in panel popup menus (for example Tiling Shell's layout picker) and the Copyous clipboard's items, search field and header/footer buttons get the same glass.
+- **Rotating submenu arrows:** the `>` arrow on a Quick Settings item (Wi-Fi, Bluetooth, power mode, Background Apps, …) turns smoothly into a `V` while its submenu is open and turns back when it closes. This also works for items that other extensions add.
 
 Most of the look is in `stylesheet.css`. Change the alpha values there to taste. The selectors come from GNOME Shell's default (Adwaita) shell theme. The arrow animation is in `extension.js`.
 
