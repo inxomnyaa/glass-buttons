@@ -1,0 +1,101 @@
+/* Glass buttons: translucent instead of solid grey/accent, to match the
+ * Blur my Shell glass popups. Loaded on top of the active (light or dark) theme. */
+
+/* --- neutral buttons --- */
+.quick-toggle,
+.quick-toggle-has-menu .quick-toggle-menu-button,
+.quick-settings .icon-button,
+.icon-button,
+.calendar .calendar-day,
+.calendar .calendar-day-heading,
+.calendar .calendar-month-header .calendar-month-label,
+.calendar .calendar-month-header .pager-button,
+.events-button,
+.world-clocks-button,
+.weather-button,
+.message-list-controls .message-list-clear-button,
+.message .message-header .message-close-button,
+.message .message-header .message-expand-button,
+.message-notification-group .message-collapse-button {
+  background-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+.quick-toggle:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:hover,
+.quick-settings .icon-button:hover,
+.icon-button:hover,
+.calendar .calendar-day:hover,
+.calendar .calendar-month-header .calendar-month-label:hover,
+.calendar .calendar-month-header .pager-button:hover,
+.events-button:hover,
+.world-clocks-button:hover,
+.weather-button:hover,
+.message-list-controls .message-list-clear-button:hover,
+.message .message-header .message-close-button:hover,
+.message .message-header .message-expand-button:hover,
+.message-notification-group .message-collapse-button:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.quick-toggle:active,
+.quick-toggle-has-menu .quick-toggle-menu-button:active,
+.quick-settings .icon-button:active,
+.icon-button:active,
+.calendar .calendar-day:active,
+.events-button:active,
+.world-clocks-button:active,
+.weather-button:active {
+  background-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+/* days outside the current month: even fainter */
+.calendar .calendar-day.calendar-other-month {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* --- accent (active toggles, today) : translucent accent color --- */
+.quick-toggle:checked,
+.quick-toggle-has-menu .quick-toggle:checked + .quick-toggle-menu-button,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked,
+.calendar .calendar-day.calendar-today {
+  background-color: st-transparentize(-st-accent-color, 0.45) !important;
+}
+.quick-toggle:checked:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover,
+.calendar .calendar-day.calendar-today:hover {
+  background-color: st-transparentize(-st-accent-color, 0.30) !important;
+}
+
+/* --- app folders: closed tile and opened dialog use the same DARK glass as the
+ * popups and dock, so the open/close zoom animation doesn't change tone.
+ * (Blur my Shell appfolder: style-dialogs=1 transparent, pipeline_default) */
+/* Blur my Shell's overview styling uses "#appDisplay .overview-tile.app-folder"
+ * selectors, so match those (with the extra .overview-tile class) to win. */
+#overviewGroup #appDisplay .overview-tile.app-folder,
+.app-folder,
+#appDisplay .overview-tile.app-folder,
+#overviewGroup .overview-tile.app-folder,
+.overview-components-transparent #appDisplay .overview-tile.app-folder,
+.overview-components-transparent #overviewGroup .overview-tile.app-folder,
+.overview-components-light #appDisplay .overview-tile.app-folder,
+.overview-components-light #overviewGroup .overview-tile.app-folder,
+.overview-components-dark #appDisplay .overview-tile.app-folder,
+.overview-components-dark #overviewGroup .overview-tile.app-folder {
+  background-color: rgba(0, 0, 0, 0.22) !important;
+}
+#overviewGroup #appDisplay .overview-tile.app-folder:hover,
+.app-folder:hover,
+#appDisplay .overview-tile.app-folder:hover,
+#overviewGroup .overview-tile.app-folder:hover,
+.overview-components-transparent #appDisplay .overview-tile.app-folder:hover,
+.overview-components-transparent #overviewGroup .overview-tile.app-folder:hover,
+.overview-components-light #appDisplay .overview-tile.app-folder:hover,
+.overview-components-light #overviewGroup .overview-tile.app-folder:hover,
+.overview-components-dark #appDisplay .overview-tile.app-folder:hover,
+.overview-components-dark #overviewGroup .overview-tile.app-folder:hover {
+  background-color: rgba(0, 0, 0, 0.30) !important;
+}
+.app-folder-dialog,
+.app-folder-dialog.appfolder-dialogs-transparent {
+  background-color: rgba(0, 0, 0, 0.22) !important;
+}
