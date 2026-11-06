@@ -166,3 +166,52 @@
 #overviewGroup #dash .show-apps:active {
   background-color: transparent !important;
 }
+
+/* --- hovered / selected / pressed menu entries (panel menus, app indicator menus
+ * like Discord, Background Apps list, quick settings submenus): glass instead of
+ * the theme's solid lighter grey --- */
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected,
+.popup-sub-menu .popup-menu-item:hover,
+.popup-sub-menu .popup-menu-item:focus,
+.popup-sub-menu .popup-menu-item:selected {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+.popup-menu-item:active,
+.popup-menu-item:active:hover,
+.popup-menu-item:active:focus,
+.popup-sub-menu .popup-menu-item:active,
+.popup-sub-menu .popup-menu-item:active:hover,
+.popup-sub-menu .popup-menu-item:active:focus {
+  background-color: rgba(255, 255, 255, 0.20) !important;
+}
+/* expanded submenu header + the submenu body itself */
+.popup-menu-item:checked,
+.popup-sub-menu {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* --- buttons that are hovered while keyboard-focused (e.g. the round arrow
+ * buttons after clicking them) used the theme's solid focus color --- */
+.quick-settings .icon-button:focus,
+.quick-settings .icon-button:focus:hover,
+.icon-button:focus,
+.icon-button:focus:hover,
+.quick-toggle:focus,
+.quick-toggle:focus:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:focus,
+.quick-toggle-has-menu .quick-toggle-menu-button:focus:hover,
+.message .message-header .message-close-button:focus:hover,
+.calendar .calendar-month-header .pager-button:focus:hover,
+.popup-menu-content .button:focus,
+.popup-menu-content .button:focus:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+/* ...without losing the accent on active toggles */
+.popup-menu-content .quick-toggle:checked:focus,
+.popup-menu-content .quick-toggle:checked:focus:hover,
+.popup-menu-content .quick-toggle-has-menu .quick-toggle-menu-button:checked:focus,
+.popup-menu-content .quick-toggle-has-menu .quick-toggle-menu-button:checked:focus:hover {
+  background-color: st-transparentize(-st-accent-color, 0.30) !important;
+}

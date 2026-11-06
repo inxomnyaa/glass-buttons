@@ -1,7 +1,11 @@
 {
   "uuid": "glass-buttons@inxomnyaa",
   "name": "Glass Buttons (local)",
-  "description": "Local tweak: translucent quick-settings / calendar / notification buttons to match Blur my Shell glass popups; quick settings arrows rotate to a V while their submenu is open.",
-  "shell-version": ["49", "50", "51"],
+  "description": "Translucent quick-settings / calendar / notification / menu buttons to match Blur my Shell glass popups.",
+  "shell-version": [
+    "49",
+    "50",
+    "51"
+  ],
   "version": 1
 }
