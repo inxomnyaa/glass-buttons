@@ -8,7 +8,7 @@ A small GNOME Shell extension (GNOME 49–51) for a glassier shell, made to go w
 
 ![Calendar and notifications: plain GNOME, with Blur my Shell, and with Blur my Shell + Glass Buttons](media/calendar.png)
 
-![App indicator menu (Discord): plain GNOME and Blur my Shell + Glass Buttons with a hovered entry, Blur my Shell alone without](media/tray-menu.png)
+![App indicator menu (Discord) with a hovered entry: plain GNOME, with Blur my Shell, and with Blur my Shell + Glass Buttons](media/tray-menu.png)
 
 ## Features
 
