@@ -151,3 +151,18 @@
 .popup-menu-content .calendar .calendar-day.calendar-today:hover {
   background-color: st-transparentize(-st-accent-color, 0.30) !important;
 }
+
+/* Blur my Shell's overview styles (.overview-components-*) give focused+hovered,
+ * pressed and drop-target tiles a background. That also hits dock icons, whose
+ * outer tile is a tall square, so a light column appears behind a dock icon
+ * that is selected (keyboard/controller) and hovered at the same time.
+ * Two IDs here beat Blur my Shell's one, so this wins regardless of load order. */
+#overviewGroup #dash .overview-tile:focus:hover,
+#overviewGroup #dash .overview-tile:active,
+#overviewGroup #dash .overview-tile:drop,
+#overviewGroup #dash .overview-tile:selected:hover,
+#overviewGroup #dash .overview-tile:highlighted:hover,
+#overviewGroup #dash .show-apps:focus:hover,
+#overviewGroup #dash .show-apps:active {
+  background-color: transparent !important;
+}
