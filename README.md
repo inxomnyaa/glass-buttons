@@ -8,6 +8,8 @@ A small GNOME Shell extension (GNOME 49–51) for a glassier shell, made to go w
 
 ![Calendar and notifications: plain GNOME, with Blur my Shell, and with Blur my Shell + Glass Buttons](media/calendar.png)
 
+![App indicator menu (Discord): plain GNOME and Blur my Shell + Glass Buttons with a hovered entry, Blur my Shell alone without](media/tray-menu.png)
+
 ## Features
 
 - **Translucent buttons:** Quick Settings toggles, the calendar/notification popup and app folders get translucent glass buttons that match the blurred popups behind them, instead of solid grey or accent-colored ones.
